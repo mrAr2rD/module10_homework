@@ -14,3 +14,19 @@ if (isNaN(+value)) {
         alert('Четное');
     }
 }
+
+// всё верно, у вас интересный вариант решения с побитовым оператором :) вот альтернативный вариант с оператором %, который возвращает остаток от деления
+
+const inputValue = prompt("Введите число")
+
+const value = +inputValue;
+
+if(typeof value == "number" && !isNaN(value)){
+  if (value % 2 == 0){
+    console.log("чётное")
+  } else {
+    console.log("нечётное")
+  }
+} else {
+  console.log("Упс, кажется, вы ошиблись")
+}
